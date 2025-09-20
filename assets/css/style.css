@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  font-family: 'Tenor Sans', sans-serif;
+  background: #FAF1E6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* LOGO */
+header {
+  text-align: center;
+  padding: 1rem;
+  background: #FAF1E6;
+}
+
+header .logo img {
+  width: 200px;
+}
+
+/* MENU */
+nav {
+  background: #C7C0AE;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #58624B;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: url("../img/massage-hero.png") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: #58624B;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #9A9A92;
+}
+
+/* QUI SUIS-JE */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* SALON */
+.salon {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.salon-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.salon-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* SERVICES */
+.services {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #FAF1E6;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-card img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+/* RÉSERVATION */
+.reservation {
+  padding: 3rem 2rem;
+  background: #C7C0AE;
+  text-align: center;
+}
+
+.calendar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header button {
+  background: #58624B;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background: #9A9A92;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.calendar-grid .day {
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-grid .day:hover {
+  background: #FAF1E6;
+}
+
+.calendar-grid .selected {
+  background: #58624B;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #58624B;
+  color: white;
+}
+
+footer a {
+  color: #FAF1E6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* CALENDAR */
+/* ==================== */
+/* FULLCALENDAR STYLING */
+/* ==================== */
+
+#calendar {
+background: #fff;
+border-radius: 8px;
+padding: 1rem;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+max-width: 900px;
+margin: 2rem auto;
+font-family: 'Tenor Sans', sans-serif;
+}
+
+.fc-event {
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 4px 6px;
+  text-align: center;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fc-event:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Créneaux disponibles */
+.available-slot {
+  background: #3ba55d !important; /* vert plus flashy */
+  color: #fff !important;
+}
+
+/* En-tête du calendrier (mois/semaines/jours + boutons) */
+.fc .fc-toolbar {
+background: #C7C0AE;
+border-radius: 8px;
+padding: 0.8rem;
+margin-bottom: 1rem;
+color: #333;
+}
+
+.fc .fc-toolbar-title {
+font-size: 1.4rem;
+font-weight: bold;
+color: #58624B;
+}
+
+.fc .fc-button {
+background: #58624B;
+border: none;
+color: white;
+padding: 0.5rem 1rem;
+border-radius: 5px !important;
+transition: 0.3s;
+}
+
+.fc .fc-button:hover {
+background: #9A9A92;
+}
+
+.fc .fc-button-primary:disabled {
+background: #C7C0AE;
+color: #fff;
+}
+
+/* Jours de la semaine */
+.fc .fc-col-header-cell {
+background: #FAF1E6;
+font-weight: bold;
+padding: 0.6rem 0;
+color: #333;
+}
+
+/* Cases des jours */
+.fc .fc-daygrid-day {
+border: 1px solid #eee;
+}
+
+.fc .fc-daygrid-day-number {
+color: #58624B;
+font-weight: bold;
+padding: 0.3rem;
+}
+
+/* Aujourd’hui */
+.fc .fc-day-today {
+background: rgba(198, 192, 174, 0.3) !important;
+}
+
+/* Événements (créneaux) */
+.fc-event {
+font-size: 0.9rem;
+border-radius: 5px;
+padding: 2px 4px;
+cursor: pointer;
+}
+
+/* Disponible */
+.fc-event[style*="2ecc71"], .fc-event[style*="green"] {
+background: #58624B !important;
+border: none !important;
+color: white !important;
+}
+
+/* Réservé */
+.fc-event[style*="e74c3c"], .fc-event[style*="red"] {
+background: #9A9A92 !important;
+border: none !important;
+color: white !important;
+}
+
+
+/* Créneaux réservés */
+.reserved-slot {
+  background: #9A9A92 !important; /* gris */
+  color: #fff !important;
+  text-decoration: line-through;  /* barré */
+  opacity: 0.8;
+}
+
+/* Formulaire réservation */
+#resaFormWrapper {
+max-width: 500px;
+margin: 2rem auto;
+background: #fff;
+padding: 1.5rem;
+border-radius: 8px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#resaFormWrapper h3 {
+color: #58624B;
+margin-bottom: 1rem;
+}
+
+#resaForm input, 
+#resaForm button {
+width: 80%;
+padding: 0.8rem;
+margin: 0.5rem 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-family: 'Tenor Sans', sans-serif;
+}
+
+#resaForm button {
+background: #58624B;
+color: white;
+border: none;
+font-weight: bold;
+transition: 0.3s;
+}
+
+#resaForm button:hover {
+background: #9A9A92;
+}
+
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  nav ul { flex-direction: column; gap: 1rem; }
+  .about { flex-direction: column; }
+}
